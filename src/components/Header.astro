@@ -1,7 +1,5 @@
 ---
-<a class="nav__link" href={`${import.meta.env.BASE_URL}news`}>
-  News
-</a>;
+import { base } from "astro:config/server";
 ---
 
 <svg style="display:none">
@@ -50,16 +48,16 @@
     </button>
     <ul class="nav__list" id="nav__list">
       <li class="nav__item">
-        <a class="nav__link" href="/about">About Us</a>
+        <a class="nav__link" href={`${base}about`}>About Us</a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="/news">News</a>
+        <a class="nav__link" href={`${base}news`}>News</a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="/code">Code</a>
+        <a class="nav__link" href={`${base}code`}>Code</a>
       </li>
       <li class="nav__item">
-        <a class="nav__link cta-btn" href="/#">Join us</a>
+        <a class="nav__link cta-btn" href={`${base}#`}>Join us</a>
       </li>
     </ul>
   </nav>
